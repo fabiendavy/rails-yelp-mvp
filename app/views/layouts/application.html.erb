@@ -12,6 +12,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light mb-4 shadow">
+      <%= link_to "YELP", restaurants_path, class: "navbar-brand"  %>
+      <%= link_to "Add restaurant", new_restaurant_path, class: "mr-4 btn btn-primary" %>
+    </nav>
+    <div class="container">
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="col-xs-6">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
